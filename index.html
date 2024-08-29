@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=chrome" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Politeknik Negeri Bandung</title>
+  </head>
+  <body>
+    <header class="header-wrapper">
+      <img class="logo" alt="logo" src="./assets/studio.png" />
+      <nav class="menu">
+        <div class="menuitem"><a href="index.html">Home</a></div>
+        <div class="menuitem"><a href="profile.html">Our Profile</a></div>
+        <div class="menuitem"><a href="messageus.html">Message Us</a></div>
+      </nav>
+    </header>
+
+    <main class="main-content">
+      <h1>Hallo <span id="title-name">   </span>, Selamat datang!</h1>
+
+      <div>
+        <img
+          class="img-slideshow"
+          src="./assets/gambar4.jpeg" alt="Slider 1"
+        />
+        <img
+          class="img-slideshow"
+          src="./assets/gambar5.jpg" alt="Slider 2"
+        />
+      </div>
+
+      <hr/>
+      <h1><center>Jurusan:</center></h1>
+      <section class="image-section">
+        <div class="image-container">
+          <center><img src="./assets/gambar1.jpg" alt="Teknik Elektro"></center>
+          <div class="image-caption">
+            <h3>Teknik Elektro</h3>
+          </div>
+        </div>
+        <div class="image-container">
+          <center><img src="./assets/gambar2.jpg" alt="Teknik Mesin"></center>
+          <div class="image-caption">
+            <h3>Teknik Mesin</h3>
+          </div>
+        </div>
+        <div class="image-container">
+          <center><img src="./assets/gambar3.jpg" alt="Teknik Sipil"></center>
+          <div class="image-caption">
+            <h3>Teknik Sipil</h3>
+          </div>
+        </div>
+      </section>
+
+      <main class="main-content">
+        <h1><center>Message Us</center></h1>
+        <div class="form-section">
+          <div class="container">
+            <form name="message-form" onsubmit="return validateForm()">
+              <div class="row">
+                <label for="fname">Nama:</label>
+                <input type="text" id="fname" name="full-name" placeholder="Your name..">
+              </div>
+              <div class="row">
+              <div class="col-25">
+                <label for="fbdate">Tanggal Lahir:</label>
+              </div>
+              <div class="col-75">
+                <input type="date" id="fbdate" name="birth-date">
+              </div>
+              </div>
+              <div class="row">
+              <div class="col-25">
+                <label for="country">Jenis Kelamin:</label>
+              </div>
+              <div class="col-75">
+                <input type="radio" id="male" name="gender" value="Laki-laki" />
+                <label for="male">Laki-laki</label>
+                <input type="radio" id="female" name="gender" value="Perempuan" />
+                <label for="female">Perempuan</label>
+              </div>
+              </div>
+              <div class="row">
+              <div class="col-25">
+                <label for="messages">Pesan:</label>
+              </div>
+              <div class="col-75">
+                <textarea id="messages" name="messages" placeholder="Write something.." style="height:100px"></textarea>
+              </div>
+              </div>
+              <br>
+              <div class="row">
+              <input type="submit" value="Submit">
+              </div>
+            </form>
+          </div>
+          
+          <div class="form-output">
+            <p> Nama: 
+            <br/>	
+            <h2><span id="sender-full-name"></span></h2>
+            <br/>
+            </p>
+            <p>
+            Tanggal Lahir: <span id="sender-birth-date"></span>
+            </p>
+            <p>
+            Jenis Kelamin: <span id="sender-gender"></span>
+            </p>
+                <p>Pesan: 
+            <br/><span id="sender-messages"></span>
+          </p>
+          </div>
+      </div>
+    </main>
+    <hr/>
+    <footer> Copyright © Politeknik Negeri Bandung</footer>
+  </body>
+  <script src="./javascript/index.js"></script>
+</html>
